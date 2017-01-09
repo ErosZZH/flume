@@ -82,6 +82,7 @@ public class Application {
     }
   }
 
+  // 订阅eventbus中的消息
   @Subscribe
   public synchronized void handleConfigurationEvent(MaterializedConfiguration conf) {
     stopAllComponents();
@@ -224,6 +225,10 @@ public class Application {
 
   }
 
+  /**
+   * flume 启动函数
+   * @param args
+   */
   public static void main(String[] args) {
 
     try {
